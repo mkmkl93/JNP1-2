@@ -1,22 +1,30 @@
-#ifndef STRSET_H
-#define STRSET_H
 
-#include <stdio.h>
 
-unsigned long strset_new();
+#ifdef __cplusplus
 
-void strset_delete(unsigned long id);
+namespace jnp1 {
+    extern "C" {
+#endif
 
-size_t strset_size(unsigned long id);
+        #include "stdio.h"
 
-void strset_insert(unsigned long id, const char* value);
+        unsigned long strset_new();
 
-void strset_remove(unsigned long id, const char* value);
+        void strset_delete(unsigned long id);
 
-int strset_test(unsigned long id, const char* value);
+        size_t strset_size(unsigned long id);
 
-void strset_clear(unsigned long id);
+        void strset_insert(unsigned long id, const char *value);
 
-int strset_comp(unsigned long id1, unsigned long id2);
+        void strset_remove(unsigned long id, const char *value);
 
+        int strset_test(unsigned long id, const char *value);
+
+        void strset_clear(unsigned long id);
+
+        int strset_comp(unsigned long str1, unsigned long str2);
+
+#ifdef __cplusplus
+    }
+}
 #endif
